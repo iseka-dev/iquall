@@ -28,11 +28,10 @@ def letter_freq(message: str) -> dict:
 def compare_freq(message_freq: dict, journal_freq: dict) -> dict:
     """
     # Funcion que compara dos diccionarios cuyas claves son
-    # caracteres alfabeticos y son la cantidad de apariciones
-    # de cada uno.
-    # Devuelve un diccionario con la diferencia entre cada
-    # caracter (solo cuando la cantidad del primero es mayor
-    # a la cantidad del segundo).
+    # caracteres alfabeticos y sus valores son la cantidad 
+    # de "repeticiones" cada uno.
+    # Devuelve un diccionario con las repeticiones que faltan
+    # en el segundo diccionario respecto del primero.
     """
     missing_letters = {}
     for key in message_freq:
@@ -63,7 +62,7 @@ if __name__ == "__main__":
     letters_in_message = letter_freq(message)
     print("\nLetters frequency in message:\n", letters_in_message)
 
-    # Luego contamos la frecuencia de cada letra en la revistsa
+    # Luego contamos la frecuencia de cada letra en la revistsa.
     letters_in_journal = letter_freq(journal)
     print("\nLetters frequency in journal:\n", letters_in_journal)
 
@@ -79,5 +78,5 @@ if __name__ == "__main__":
     else:
         print(
             "\n\nUsted puede escribir el mensaje con los caracteres"
-            " de la revista"
+            " de la revista\n\n"
         )
